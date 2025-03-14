@@ -1,73 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mario Veículos</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo"><img src="mv.png" alt="Mario Veículos"></div>
+    <header class="header-preto">
+        <div class="logo">
+            <img src="mv.png" alt="Mario Veículos">
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
+                <li><a href="#">Quem Somos</a></li>
                 <li><a href="#">Veículos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li class="dif"><a href="https://wa.me/559899999999" class="whatsapp-btn">Whatsapp</a></li>
             </ul>
         </nav>
     </header>
-    <section class="sobre">
-        <h1>Mario Veículos</h1>
-        <p>Somos uma empresa especializada na compra e venda de veículos...</p>
-        <div class="imagens" id="carrossel">
-            <img src="mv1.jpg" alt="Fachada Mario Veículos" class="slide">
-            <img src="mv2.jpg" alt="Equipe Mario Veículos" class="slide">
-            <img src="mv2.jpg" alt="Equipe Mario Veículos" class="slide">
-            <img src="mv2.jpg" alt="Equipe Mario Veículos" class="slide">
-            <img src="mv2.jpg" alt="Equipe Mario Veículos" class="slide">
-            <img src="mv2.jpg" alt="Equipe Mario Veículos" class="slide">
+
+    <div class="subtitulo-amarelo">
+        <span>Rua Teste, 12 - Centro</span>
+        <span>(18) 99888-2222</span>
+        <span>@marioveiculos</span>
+    </div>
+
+    <section class="carousel">
+        <div class="carousel-container">
+            <img src="mv1.jpg" class="active">
+            <img src="mv1.jpg">
+            <img src="mv2.jpg">
         </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
     </section>
 
-    
-    <section class="busca">
-        <h2>Busque seu Veículo na Mario Veículos, <span class="destaque">ELE ESTÁ AQUI!</span></h2>
-        <div class="filtros">
-            <select id="marca" onchange="mostrarModelos()">
-                <option>Selecione a Marca</option>
-                <option value="ford">Ford</option>
-                <option value="chevrolet">Chevrolet</option>
-                <option value="volkswagen">Volkswagen</option>
-                <option value="fiat">Fiat</option>
-                <option value="honda">Honda</option>
-            </select>
-            <select id="modelo">
-                <option>Selecione o Modelo</option>
-                <!-- Modelos vão ser carregados com base na marca selecionada -->
-            </select>
-            <select id="marca">
-                <option>Selecione o Ano</option>
-                <option>2024</option>
-                <option>2023</option>
-                <option>2022</option>
-                <option>2021</option>
-                <option>2020</option>
-            </select>
-        </div>
-        <button class="buscar">BUSCAR VEÍCULOS</button>
-    </section>
     <section class="veiculos">
-        <div class="carro"><img src="carro.jpg" alt="Ford Fiesta"><p>Ford Fiesta</p><p>R$ 45.000</p></div>
-        <div class="carro"><img src="carro.jpg" alt="Chevrolet Onix"><p>Chevrolet Onix</p><p>R$ 55.000</p></div>
-        <div class="carro"><img src="carro.jpg" alt="Volkswagen Gol"><p>Volkswagen Gol</p><p>R$ 40.000</p></div>
-        <div class="carro"><img src="carro.jpg" alt="Fiat Uno"><p>Fiat Uno</p><p>R$ 35.000</p></div>
-        <div class="carro"><img src="carro.jpg" alt="Honda Civic"><p>Honda Civic</p><p>R$ 75.000</p></div>
-    </section>
-    <section class="agendar">
-        <button>AGENDE UMA VISITA</button>
+        <h2>Alguns Veículos para você</h2>
+        <div class="veiculos-lista">
+            <div class="veiculo-card">
+                <img src="hilux.jpg" alt="Toyota Hilux">
+                <h3>Toyota Hilux</h3>
+                <p>2.7 Flex</p>
+                <p>R$160.000,00</p>
+                <p>193.000 km - 2017</p>
+            </div>
+            <div class="veiculo-card">
+                <img src="hilux.jpg" alt="Toyota Hilux">
+                <h3>Toyota Hilux</h3>
+                <p>2.7 Flex</p>
+                <p>R$160.000,00</p>
+                <p>193.000 km - 2017</p>
+            </div>
+            <div class="veiculo-card">
+                <img src="hilux.jpg" alt="Toyota Hilux">
+                <h3>Toyota Hilux</h3>
+                <p>2.7 Flex</p>
+                <p>R$160.000,00</p>
+                <p>193.000 km - 2017</p>
+            </div>
+        </div>
+        <button class="mais-veiculos">Mais Veículos</button>
     </section>
     <footer>
         <img src="mv.png" alt="Mario Veículos">

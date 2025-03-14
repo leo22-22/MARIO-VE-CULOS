@@ -1,167 +1,120 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #fff;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-header {
+body {
+    background-color: #f8f8f8;
+}
+
+.header-preto {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: black;
-    padding: 10px 20px;
+    padding: 15px 20px;
 }
 
-.logo img {
-    height: 50%;
-    width: 80%;
+.header-preto .logo img {
+    width: 170px;
+    margin: auto 0;
+    margin-left: 50px;
 }
 
-.imagens {
-    position: relative;
-    width: 100%;
-    max-width: 800px; 
-    margin: 0 auto; 
-    overflow: hidden; 
-}
-
-.imagens img {
-    width: 200px;
-    height: 250px;
-    border: 1px solid black;
-    border-radius: 10px;
-    transition: transform 0.5s;
-}
-
-.next, .prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5); 
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 10; 
-}
-
-.next {
-    right: 10px;
-}
-
-.prev {
-    left: 10px; 
-}
-
-.next:hover, .prev:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.next, .prev {
-    transition: background-color 0.3s;
-}
-
-.carrossel-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.carrossel img {
-    display: none; /* Esconde todas as imagens por padrão */
-}
-
-.carrossel img.selecionado {
-    display: block; /* Mostra apenas a imagem com a classe 'selecionado' */
-}
-
-nav ul {
+.header-preto nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-nav ul li a {
-    color: yellow;
+.header-preto nav ul li {
+    display: inline;
+}
+
+.header-preto nav ul li a {
+    color: #ffcc00;
     text-decoration: none;
     font-weight: bold;
 }
-
-.sobre {
-    padding: 20px;
+.dif {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
 }
-
-.imagens img {
-    width: 45%;
-    margin: 5px;
-}
-
-.busca {
-    background: #000;
-    color: #fff;
-    padding: 20px;
-}
-
-.busca input {
-    padding: 10px;
-    margin: 5px;
-    border: none;
-}
-
-#marca{
-    border: 1px solid #000;
-    padding: 10px;
-    background-color: #fff000;
-    color: #000;
+.whatsapp-btn {
+    background-color: #ffcc00;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
     font-weight: bold;
 }
 
-#modelo{
-    border: 1px solid #000;
-    padding: 10px;
-    background-color: #fff000;
-    color: #000;
+.subtitulo-amarelo {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 8px 0;
     font-weight: bold;
 }
 
-.destaque {
-    color: red;
-    font-weight: bold;
+.subtitulo-amarelo span {
+    margin: 0 15px;
 }
 
-.filtros button, .buscar, .agendar button {
-    background-color: black;
-    color: yellow;
-    border: none;
-    padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
-    font-weight: bold;
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-container img {
+    width: 100%;
+    display: none;
+}
+
+.carousel-container img.active {
+    display: block;
 }
 
 .veiculos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-}
-
-.carro {
-    background: black;
-    color: white;
-    padding: 10px;
-    margin: 10px;
     text-align: center;
+    margin: 20px;
 }
 
-.carro img {
-    width: 150px;
+.veiculos-lista {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
+
+.veiculo-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+}
+
+.veiculo-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.mais-veiculos {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
 
 footer {
     background: black;
@@ -169,8 +122,14 @@ footer {
     padding: 20px;
 }
 
+footer p{
+    margin-left: 70px;
+    text-align: center;
+}
+
+
 footer img{
     width: 200px;
     height: 100px;
-    margin: 10px;
+    margin-left: 500px;
 }
